@@ -57,7 +57,8 @@ function viewObj(obj){
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 0, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([0, 0, 255, 255]))
 
         var image = new Image()
-        image.src = "img/" + i + ".jpg"
+        image.crossOrigin = "anonymous"
+        image.src = "https://raw.githubusercontent.com/thalialongaray/SpaceInvaders/main/img/" + i + ".jpg"
 
         images.push(image)
         textures.push(texture)
