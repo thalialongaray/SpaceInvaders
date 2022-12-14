@@ -4,9 +4,6 @@
 const gui = new dat.GUI();
 gui.close();
 
-const addobj = {add: addObj};
-gui.add(addobj, "add").name("Add Object");
-
 const fieldofview = {FieldOfView: 2.5};
 gui.add(fieldofview, "FieldOfView", 0, 3).name("Field Of View");
 
