@@ -49,21 +49,6 @@ function addInvaders(num) {
     invaders += num
     var s = 250
 
-    // fetch('cubo.obj')
-    //     .then(response => response.text())
-    //     .then(text => {
-    //         text = text.split("\n")
-    //         objects.push(new Obj(text, 0))
-    //         gui.__folders[objects[objects.length - 1].name].__folders["Translation"].__controllers[0].setValue(Math.floor(((objects[objects.length - 1].name - 1) % 10)) * s)
-    //         gui.__folders[objects[objects.length - 1].name].__folders["Translation"].__controllers[1].setValue((Math.floor((objects[objects.length - 1].name - 1) / 10) * s) + 500)
-
-    //         for(var i = 0; i < (num - 1); i++) {
-    //             objects.push(new Obj(objects[0].content, 0))
-    //             gui.__folders[objects[objects.length - 1].name].__folders["Translation"].__controllers[0].setValue(Math.floor(((objects[objects.length - 1].name - 1) % 10)) * s)
-    //             gui.__folders[objects[objects.length - 1].name].__folders["Translation"].__controllers[1].setValue((Math.floor((objects[objects.length - 1].name - 1) / 10) * s) + 500)
-    //         }
-    //     })
-
     objects.push(new Obj(cubo.split("\n"), 0))
     gui.__folders[objects[objects.length - 1].name].__folders["Translation"].__controllers[0].setValue(Math.floor(((objects[objects.length - 1].name - 1) % 10)) * s)
     gui.__folders[objects[objects.length - 1].name].__folders["Translation"].__controllers[1].setValue((Math.floor((objects[objects.length - 1].name - 1) / 10) * s) + 500)
@@ -76,36 +61,13 @@ function addInvaders(num) {
 }
 
 function addShips() {
-    // fetch('cubo.obj')
-    //     .then(response => response.text())
-    //     .then(text => {
-    //         text = text.split("\n")
-    //         objects.push(new Obj(text, 1))
-
-    //         viewObj(objects[objects.length - 1])
-    //     })
-
     objects.push(new Obj(cubo.split("\n"), 1))
     objects.push(new Obj(cubo.split("\n"), 3))
     viewObj(objects[objects.length - 1])
-
-    // fetch('cubo.obj')
-    //     .then(response => response.text())
-    //     .then(text => {
-    //         text = text.split("\n")
-    //         objects.push(new Obj(text, 3))
-    //     })
 }
 
 function addShot(type) {
     if(type == 2 && shot == maxshot) st = 1
-    
-    // fetch('cubo.obj')
-    //     .then(response => response.text())
-    //     .then(text => {
-    //         text = text.split("\n")
-    //         objects.push(new Obj(text, type))
-    // })
 
     objects.push(new Obj(cubo.split("\n"), type))
 }
